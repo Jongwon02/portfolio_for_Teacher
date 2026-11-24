@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: '신종원 (Kevin) — Portfolio',
     description: '체·덕·지를 갖춘 교육 개발자, 신종원(Kevin)을 소개합니다.',
-    images: ['https://kevin-portfolio.vercel.app/thats_me.webp'],
+    images: ['https://portfolio-for-teacher.vercel.app/thats_me.webp'],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: '신종원 (Kevin) — Portfolio',
     description: '체·덕·지를 갖춘 교육 개발자, 신종원(Kevin)을 소개합니다.',
-    images: ['https://kevin-portfolio.vercel.app/thats_me.webp'],
+    images: ['https://portfolio-for-teacher.vercel.app/thats_me.webp'],
   },
   icons: {
     icon: '/thats_me.webp',

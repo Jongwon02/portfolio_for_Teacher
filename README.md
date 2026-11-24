@@ -82,7 +82,7 @@ brand-400 #818cf8      brand-700 #3730a3      indigoPurple #7b61ff
 ### 5. 탭 제목·검색/공유 미리보기 → `app/layout.tsx`
 
 `metadata`의 title, description, Open Graph, Twitter 카드 설정이 있습니다.
-`og:image` / `twitter:image`가 예전 도메인(`kevin-portfolio.vercel.app`)을 가리키고 있으니 도메인이 바뀌면 함께 수정하세요.
+`og:image` / `twitter:image`는 배포 도메인(`portfolio-for-teacher.vercel.app`)을 가리킵니다. 도메인이 바뀌면 함께 수정하세요.
 
 ### 6. 이미지 → `public/`
 
@@ -102,4 +102,4 @@ npx vercel        # 미리보기 배포
 npx vercel --prod # 프로덕션 배포
 ```
 
-기존 `kevin-portfolio` 프로젝트에 이어서 배포하려면 첫 실행 시 해당 프로젝트를 선택하세요.
+Vercel 프로젝트는 `portfolio-for-teacher`입니다. 운영 주소: <https://portfolio-for-teacher.vercel.app>
