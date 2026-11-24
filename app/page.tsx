@@ -1,8 +1,10 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Skills from '@/components/Skills';
-import Works from '@/components/Works';
+import Philosophy from '@/components/Philosophy';
+import Body from '@/components/Body';
+import Virtue from '@/components/Virtue';
+import Mind from '@/components/Mind';
+import Vision from '@/components/Vision';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -11,9 +13,11 @@ export default function Home() {
     <main>
       <Header />
       <Hero />
-      <About />
-      <Skills />
-      <Works />
+      <Philosophy />
+      <Body />
+      <Virtue />
+      <Mind />
+      <Vision />
       <Contact />
       <Footer />
     </main>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Reveal from './Reveal';
-import { siteConfig } from '@/lib/site';
+import { siteConfig, vision } from '@/lib/site';
 
 export default function Contact() {
   return (
@@ -22,10 +22,12 @@ export default function Contact() {
             </div>
 
             <h2 className="relative text-3xl font-extrabold text-white sm:text-4xl">
-              함께 이야기 나누고 싶다면?
+              아이들에게는 즐거운 배움을,<br className="hidden sm:block" /> 선생님에게는 든든한 도구를
             </h2>
             <p className="relative mx-auto mt-4 max-w-lg text-white/85">
-              협업, 채용, 그 무엇이든 좋아요. 언제든 편하게 연락 주세요!
+              {vision.closing}
+              <br />
+              함께 만들고 싶은 교육 프로그램이 있다면 편하게 연락 주시기 바랍니다.
             </p>
 
             <a

@@ -20,7 +20,7 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur">
-            👋 Welcome to Kevin&apos;s Portfolio
+            🍎 체 · 덕 · 지를 갖춘 교육 개발자
           </span>
           <h1 className="mt-6 text-4xl font-extrabold leading-tight text-white sm:text-5xl lg:text-6xl">
             안녕하세요,
@@ -36,10 +36,10 @@ export default function Hero() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#works"
+              href="#philosophy"
               className="pill-btn bg-white text-brand-600 shadow-soft hover:-translate-y-0.5 hover:shadow-lg"
             >
-              작업 보기 →
+              체·덕·지 보기 →
             </a>
             <a
               href="#contact"

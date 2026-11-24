@@ -1,7 +1,11 @@
-# 신종원 (Kevin) — Portfolio
+# 신종원 (Kevin) — 교육 개발자 포트폴리오
 
-배포본 <https://kevin-portfolio-21111.vercel.app> 을 편집 가능한 소스로 복원한 프로젝트입니다.
-`next build` 결과 렌더링 HTML이 원본 배포와 100% 동일함을 확인했습니다.
+아이들과 선생님을 위한 프로그램을 만드는 개발자가 되고 싶다는 목표를,
+존 로크의 **체(體)·덕(德)·지(智)** 를 기록으로 보여 주며 소개하는 포트폴리오입니다.
+요구사항은 [`docs/PRD.md`](docs/PRD.md), 작업 규칙은 [`CLAUDE.md`](CLAUDE.md)를 참고하세요.
+
+`For_My_Portfolio`(배포본 <https://kevin-portfolio-21111.vercel.app>)의 히어로·헤더·연락처 디자인을 그대로 쓰고,
+기존 배치(About · Strengths · Works 카드)를 그대로 살려 본문을 체·덕·지 순서로 채웠습니다.
 
 ## 실행하기
 
@@ -31,12 +35,19 @@ npm run build   # 배포용 빌드
 | `siteConfig.role` | 히어로의 한 줄 소개 |
 | `siteConfig.heroTagline` | 히어로 본문 문단 |
 | `siteConfig.email` | Contact 버튼의 메일 주소 |
-| `siteConfig.about` | About 섹션 문단 배열 (원소를 추가하면 문단이 늘어남) |
-| `siteConfig.tags` | About 섹션의 `#해시태그` 목록 |
-| `siteConfig.social` | GitHub / Instagram / Blog 링크 — `href`를 실제 주소로 바꾸세요 |
+| `siteConfig.social` | Contact의 링크 (GitHub) |
 | `navItems` | 상단 메뉴 |
-| `strengths` | Skills 섹션 카드 6개 (이모지 / 제목 / 설명) |
-| `projects` | Works 섹션 프로젝트 카드 (지금은 예시 내용이라 실제 작업물로 교체하면 됩니다) |
+| `pillars` | About 섹션의 체·덕·지 해시태그 |
+| `award` | 덕 섹션 — 사회복무대상 내용과 표창장 이미지 경로 |
+| `projects` | 지 섹션 프로젝트 카드 (`desc`가 자료 추가 예정 상태) |
+
+운동 숫자와 그래프는 `data/fitness-summary.json`에서 읽습니다. 다시 만들려면:
+
+```bash
+python scripts/aggregate_fitness.py "<삼성헬스 내보내기 폴더>"
+```
+
+원본 삼성헬스 데이터는 저장소에 넣지 않습니다.
 
 ### 2. 디자인·레이아웃을 바꾸고 싶다면 → `components/`
 
@@ -44,9 +55,10 @@ npm run build   # 배포용 빌드
 | --- | --- |
 | `Header.tsx` | 상단 고정 네비게이션 (스크롤 20px 넘으면 흰 배경으로 전환, 모바일 햄버거 메뉴) |
 | `Hero.tsx` | 첫 화면 — 캐릭터 둥둥 애니메이션, 아래쪽 물결 SVG |
-| `About.tsx` | 자기소개 + 해시태그 |
-| `Skills.tsx` | 강점 카드 그리드 |
-| `Works.tsx` | 작업물 카드 그리드 |
+| `Philosophy.tsx` | About 배치 — 로크의 체·덕·지와 교육관 |
+| `Body.tsx` | Strengths 카드 배치 — 체: 운동 기록 숫자와 월별 그래프 |
+| `Virtue.tsx` | About 배치(좌우 반전) — 덕: 사회복무대상과 표창장 |
+| `Mind.tsx` | Works 카드 배치 — 지: 프로젝트 |
 | `Contact.tsx` | 연락처 CTA 카드 |
 | `Footer.tsx` | 하단 푸터 |
 | `Reveal.tsx` | 스크롤 시 아래에서 떠오르는 등장 애니메이션 래퍼 |
@@ -78,7 +90,7 @@ brand-400 #818cf8      brand-700 #3730a3      indigoPurple #7b61ff
 public/thats_me.webp            프로필 아이콘 (파비콘 겸용)
 public/images/kevin-hero.webp   히어로 캐릭터
 public/images/kevin-cart.webp   Contact 캐릭터
-public/images/kevin-face.webp   Works 카드 이미지
+public/evidence/award-masked.jpg 표창장 (근무 기관명 가림 처리본)
 ```
 
 같은 파일명으로 덮어쓰면 코드 수정 없이 이미지가 교체됩니다.
